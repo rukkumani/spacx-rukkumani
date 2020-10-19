@@ -6,5 +6,5 @@
 6)ng serve:ssr will serve the app from node server so front end no need to do anything .
 7)this project is developed using only css not any frame work .we used the flex
 8)performance is analized by lighthouse
-![Alt text](src\assets\lighthouse.PNG?raw=true)
+![Alt lightHouse](src\assets\lighthouse.PNG)
 
