@@ -1,0 +1,116 @@
+.container{
+    width: 100%;
+}
+.card{
+    width:100%
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    flex-grow:1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.parent1{
+    width:100%
+}
+.parent-flex{
+    flex-basis: 10%;  
+
+}
+
+
+.parant-color{
+    background-color: white;
+}
+.child{
+    flex-grow:1;
+    flex-basis: 80%;
+}
+
+.launch-year{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+
+ 
+.item{
+    margin-top: 20px;
+    text-align: center;
+    align-self: start;
+    flex: 0 49%;
+
+
+   
+}
+label{
+    padding: 5px;
+    padding-bottom: 2px;
+    text-decoration: underline;
+    text-decoration-color: rgb(189, 185, 185);
+    margin-top: 2px;
+
+}
+
+h5{
+    font-weight: bolder;
+    align-self: start !important;
+}
+
+span{  
+    padding: 5px;
+    margin: 5px;
+    background-color:#c7df96;
+    border-radius: 5px;
+}
+
+.active,.active-land{
+    background-color: #00801c !important;
+}
+
+
+p{
+    cursor: pointer;
+}
+
+
+@media screen and (min-width:1441px) {
+    .card{
+      width: 1441px;
+      align-self: center;
+    }  
+    .parent{
+        flex-grow: 0;
+    } 
+   }
+@media screen and (max-width: 1023px) and (min-width: 701px) {
+    .parent1{
+        width:100%
+    }
+
+
+
+    .child{
+        flex-grow:1;
+        flex-basis: 60%;
+    }
+  
+    }
+
+
+    @media screen and (max-width: 700px) {
+        .card{
+            flex-direction: column;
+        }
+        .parent{
+            width: 100%;
+            flex-grow:1;
+        }
+        
+        }
+        

@@ -1,0 +1,43 @@
+<div class="card-container">
+    <h4>SpaceX Launch Programs</h4>
+    <div class="card">
+   <div class="parent parant-color parent-flex">
+       <h5>Fliters</h5>
+    <div class="parent">
+           <label>Launch Year</label>
+           <div *ngIf="launchedYear&&launchedYear.length" class="launch-year">
+               <p *ngFor=" let year of launchedYear; let index= index" (click)='getFilteredKeyValue("launch_year",year,index)' class="item item1"  >
+                <span [class.active] = "selectedIndex==index"> {{year}}</span>
+               </p>
+           </div>
+    </div>
+    <div class="parent parent1">
+        <label>Successful Launch</label>
+        <div class="launch-year">
+            <p (click)='getFilteredKeyValue("launch_success","true","0")' class="item">
+                <span [class.active] = "launch=='0'">True </span></p>
+            <p (click)='getFilteredKeyValue("launch_success","false","1")' class="item">
+                <span [class.active] = "launch=='1'">False </span></p>
+
+        </div>
+    </div>
+
+    <div class="parent parent1">
+        <label> Successful Land  </label>
+        <div class="launch-year">
+            <p (click)='getFilteredKeyValue("land_success","true","0")' class="item">
+                <span [class.active-land]="landing=='0'">True</span></p>
+            <p (click)='getFilteredKeyValue("land_success","false","1")' class="item">
+                <span [class.active-land]="landing =='1'">False</span></p>
+
+        </div>
+    </div>
+
+   </div>
+<div class="child">
+<app-filtered-spac-xlaunch [childFilteredData]="childFilteredData"></app-filtered-spac-xlaunch>
+</div>
+
+    </div>
+</div>
+
