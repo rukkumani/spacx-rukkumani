@@ -1,102 +1,178 @@
-/* You can add global styles to this file, and also import other style files */
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #dcdcdc;
-  }
-body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: #dcdcdc;
 }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-  {
-    margin: 8px 0;
+
+.card-container{
+    padding: 15px;
+    color:black;
+    background-color: #dcdcdc
   }
-
-  p {
-    margin: 0;
-  }
-
-  .spacer {
-    flex: 1;
-  }
-
-
-  .content {
-    display: flex;
-    margin: 32px auto;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-container {
+  
+  .header{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-right: -15px;
+    margin-left: 15px;
+    text-align: left;
+    max-width: 100%;
+    font-weight: bold;
+    font-size: larger;
+    padding: 5px;
+  }
+  
+  .footer{
+    text-align: center;
+    font-weight: bold; padding: 10px;
+  }
+  .list-filter {
+    font-weight: 700;
+    margin-left: 10px;
   }
 
-  .card {
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    padding: 16px;
+  .card{
+    height: 92%;
     display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    align-items: flex-start;
-    transition: all 0.2s ease-in-out;
-    /* line-height: 24px; */
-  }
-  /* .child{
-      display: flex;
-      flex-direction: row;
-      background-color: #707070;
-
-  } */
-
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
+    background-color: #dcdcdc
   }
 
-  a:hover {
-    color: #125699;
-  }
+  
+
+  
+
+p{
+    cursor: pointer;
+}
 
 
+.active,.active-land{
+    background-color: #00801c !important;
+}
 
-  /* Responsive Styles */
-  @media screen and (max-width: 700px) {
+label{
+  font-weight: bold;
+}
 
-    .card-container > *:not(.circle-link) ,
-    .terminal {
+  
+  @media only screen and (max-width: 700px)  {
+    .card {
       width: 100%;
+      flex-direction: column;
+    }
+    .parent-filter{
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+    .image-container{
+     width: 100% !important;
+    }
+    .child-image{
+      grid-template-columns: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) and (min-width: 701px)   {
+    .card {
+      flex-direction: row;
+    }
+    .parent-filter{
+      width: 20% !important;
+      margin-right: 10px;
+    }
+    .image-container{
+     width: 100%;
+    }
+    .child-image{
+      width: 100%;
+      grid-template-columns: auto auto;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px)  {
+    .card {
+      flex-direction: row;
+    }
+    .parent-filter{
+      width: 20% !important;
+      margin-right: 10px;
+    }
+    .image-container{
+     width: 100%;
     }
 
+    .child-image{
+      width: 100%;
+      grid-template-columns: auto auto auto auto;
+    }
+  }
   
+  .parent-filter{
+    border: 1px solid #edebe9;
+    display: grid;
+    height: fit-content;
+    background-color: white;
+    border-radius: 8px;
+  }
 
+  .parent{
+    display: grid;
+    height: fit-content;
+   
   }
 
   
 
-  
-@media screen and (max-width: 1024px) and (min-width: 701px) {
-  
-  .card{
-   padding: 0px;
-  }   
- 
+  .child-image{
+    display: grid;
   }
+  
+  .launch-year{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
+  .data{
+    align-self: start;
+  }
+
+
+
+  
+  .image-container{
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .image-card{
+      background-color: #f2f2f2;
+      position: relative;
+      height: 240px;
+      margin: 10px;
+  }
+  
+  
+  .image{
+  height: 240px;
+  width: 100%
+  }
+  
+  .name{
+    color:#6e8fe2;
+}
+  

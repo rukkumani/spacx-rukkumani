@@ -1,34 +1,32 @@
-<ng-container>
-<div *ngIf="filteredData&&filteredData.length" class="container"> 
-<div class="parent" *ngFor="let data of filteredData">
-    <div class="child1">
-        <div class="card">
-            <img [src]="data.links">
-        </div> 
-        <label class="name">{{data.mission_name }} # {{data.flight_number}}</label>
 
+<div *ngIf="filteredData&&filteredData.length" class="child-image"> 
+<div  *ngFor="let data of filteredData" class="image-container">
+    <div class="image-card">
+            <img alt="spacx" class="image" [src]="data.links">
+
+            
+        </div>
+        <div  class="child">
+        <label class="name">{{data.mission_name }} # {{data.flight_number}}</label>
     </div>
     <div class="child">
         <label>Mission Ids :</label>
-        <p>{{data.mission_id}}</p>
+        <span class="data">{{data.mission_id}}</span>
     </div>
-    <div class="child">'
+    <div class="child">
         <label>Launch Year :</label>
-        <p>{{data.launch_year}}</p>
+        <span>{{data.launch_year}}</span>
     </div>
     <div class="child">
         <label>Successful Launch :</label>
-        <p>{{data.launch_success}}</p>
+        <span>{{data.launch_success}}</span>
     </div>
     <div class="child">
         <label>Successful Land :</label>
-        <p>{{data.land_success}}</p>
+        <span>{{data.land_success}}</span>
     </div>
-    
+
 </div>
 
 </div>
-<div class="developer">
-    <h4>Developed By Rukkumani</h4>   
-</div>
-</ng-container>
+
